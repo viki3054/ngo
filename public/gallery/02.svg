@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0ea5e9" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#22c55e" stop-opacity="0.18"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="#08121f"/>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect x="90" y="120" width="1020" height="660" rx="44" fill="#0b1220" fill-opacity="0.35" stroke="#ffffff" stroke-opacity="0.15"/>
+  <g transform="translate(510 380)">
+    <rect x="-120" y="-120" width="240" height="240" rx="48" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.18"/>
+    <path d="M-18 -54h36v48h48v36H18v48h-36V30h-48v-36h48v-48z" fill="#ffffff" fill-opacity="0.92"/>
+  </g>
+  <text x="130" y="210" font-family="system-ui, -apple-system, Segoe UI" font-size="44" font-weight="800" fill="#ffffff" fill-opacity="0.92">Health camp day</text>
+  <text x="130" y="260" font-family="system-ui, -apple-system, Segoe UI" font-size="22" font-weight="600" fill="#ffffff" fill-opacity="0.70">Health • Awareness • Checkups</text>
+</svg>
