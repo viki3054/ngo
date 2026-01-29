@@ -27,12 +27,18 @@ module.exports = {
           '0%': { backgroundPosition: '0% 50%' },
           '100%': { backgroundPosition: '100% 50%' },
         },
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
       },
       animation: {
         floaty: 'floaty 6s ease-in-out infinite',
         shimmer: 'shimmer 10s ease-in-out infinite',
+        marquee: 'marquee 22s linear infinite',
       },
     },
   },
   plugins: [],
 }
+

@@ -1,9 +1,15 @@
-import { ArrowRight, Leaf, School, ShieldPlus, Users } from 'lucide-react'
+import { motion, useReducedMotion } from 'framer-motion'
+import { ArrowRight, Leaf, School, ShieldPlus, Sparkles, Users } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { PageShell } from '../components/PageShell'
 import { Reveal } from '../components/Reveal'
+import { Marquee } from '../components/Marquee'
+import { StatsStrip } from '../components/StatsStrip'
+import { TestimonialCarousel } from '../components/TestimonialCarousel'
 
 export function HomePage() {
+  const reduceMotion = useReducedMotion()
+
   return (
     <PageShell>
       <section className="grid items-center gap-10 lg:grid-cols-2">
@@ -21,8 +27,7 @@ export function HomePage() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="max-w-xl text-pretty text-base text-fg/75 sm:text-lg">
-              We work with communities across Maharashtra to support education, health,
-              and livelihood opportunities—so every family can move forward with dignity.
+              Education, health, livelihood, and environment—delivered with local partners.
             </p>
           </Reveal>
           <Reveal delay={0.18}>
@@ -41,7 +46,19 @@ export function HomePage() {
         </div>
 
         <div className="card relative overflow-hidden p-6">
-          <div className="absolute inset-0 bg-[linear-gradient(110deg,hsl(var(--primary)/0.18),transparent_35%,hsl(var(--ring)/0.14))]" />
+          <div className="absolute inset-0 bg-[linear-gradient(110deg,hsl(var(--primary)/0.20),transparent_35%,hsl(var(--ring)/0.16))]" />
+          <motion.div
+            aria-hidden
+            className="absolute -right-10 -top-10 h-44 w-44 rounded-full bg-primary/20 blur-2xl"
+            animate={reduceMotion ? {} : { y: [0, -10, 0], x: [0, -8, 0] }}
+            transition={{ duration: 6.5, repeat: Infinity, ease: 'easeInOut' }}
+          />
+          <motion.div
+            aria-hidden
+            className="absolute -bottom-10 -left-10 h-52 w-52 rounded-full bg-[hsl(var(--ring)/0.16)] blur-2xl"
+            animate={reduceMotion ? {} : { y: [0, 10, 0], x: [0, 10, 0] }}
+            transition={{ duration: 7.5, repeat: Infinity, ease: 'easeInOut' }}
+          />
           <div className="relative grid gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border bg-bg/40 p-4">
               <div className="flex items-center gap-2 font-semibold">
@@ -75,30 +92,59 @@ export function HomePage() {
                 Clean-up drives and plantation initiatives.
               </div>
             </div>
+            <div className="col-span-full rounded-2xl border bg-bg/40 p-4">
+              <div className="flex items-center gap-2 text-sm font-extrabold">
+                <Sparkles className="h-4 w-4 text-primary" /> Next drive
+              </div>
+              <div className="mt-1 text-sm text-fg/75">
+                Community awareness session + distribution (placeholder)
+              </div>
+              <div className="mt-3 flex gap-3">
+                <Link to="/volunteer" className="btn-primary">
+                  Join
+                </Link>
+                <Link to="/contact" className="btn-ghost">
+                  Partner with us
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="mt-14 grid gap-6 lg:grid-cols-3">
-        {[{
-          title: 'Transparent support',
-          desc: 'Clear updates on where help goes and what it changes.',
-        },
-        {
-          title: 'Local partnerships',
-          desc: 'Working with teachers, clinics, and community leaders.',
-        },
-        {
-          title: 'Long-term impact',
-          desc: 'Programs designed to build skills and resilience.',
-        }].map((c, i) => (
-          <Reveal key={c.title} delay={0.04 * i}>
-            <div className="card p-6">
-              <div className="text-lg font-extrabold">{c.title}</div>
-              <div className="mt-2 text-sm text-fg/70">{c.desc}</div>
+      <section className="mt-14">
+        <Reveal>
+          <div className="mb-4 text-sm font-extrabold text-fg/80">Impact at a glance</div>
+        </Reveal>
+        <Reveal delay={0.06}>
+          <StatsStrip />
+        </Reveal>
+      </section>
+
+      <section className="mt-12 grid gap-6 lg:grid-cols-2">
+        <Reveal>
+          <TestimonialCarousel />
+        </Reveal>
+        <Reveal delay={0.06}>
+          <div className="card p-6">
+            <div className="text-lg font-extrabold">Supported by partners</div>
+            <div className="mt-4">
+              <Marquee>
+                {['Schools', 'Clinics', 'Local leaders', 'Volunteers', 'Donors', 'Communities'].map((x) => (
+                  <div
+                    key={x}
+                    className="rounded-full border bg-bg/40 px-4 py-2 text-sm font-semibold text-fg/75"
+                  >
+                    {x}
+                  </div>
+                ))}
+              </Marquee>
             </div>
-          </Reveal>
-        ))}
+            <div className="mt-4 text-sm text-fg/70">
+              We collaborate to keep programs practical, respectful, and measurable.
+            </div>
+          </div>
+        </Reveal>
       </section>
     </PageShell>
   )
