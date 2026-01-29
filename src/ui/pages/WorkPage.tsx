@@ -29,7 +29,7 @@ const programs = [
 export function WorkPage() {
   return (
     <PageShell>
-      <section className="card p-8">
+      <section className="card p-5 sm:p-8">
         <Reveal>
           <h1 className="text-3xl font-black tracking-tight">Our Work</h1>
         </Reveal>
@@ -41,10 +41,10 @@ export function WorkPage() {
         </Reveal>
       </section>
 
-      <section className="mt-10 grid gap-6 md:grid-cols-2">
+      <section className="mt-8 grid gap-5 sm:mt-10 sm:gap-6 md:grid-cols-2">
         {programs.map((p, i) => (
           <Reveal key={p.title} delay={0.04 * i}>
-            <div className="card group p-6 transition hover:-translate-y-0.5 hover:shadow-soft">
+            <div className="card group p-5 sm:p-6 transition hover:-translate-y-0.5 hover:shadow-soft">
               <div className="flex items-center gap-3">
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-primary/15 text-primary">
                   <p.Icon className="h-5 w-5" />
@@ -52,11 +52,11 @@ export function WorkPage() {
                 <div className="text-lg font-extrabold">{p.title}</div>
               </div>
               <div className="mt-3 text-sm text-fg/70">{p.desc}</div>
-              <div className="mt-5 flex gap-3">
-                <Link to="/donate" className="btn-primary">
+              <div className="mt-5 flex flex-wrap gap-3">
+                <Link to="/donate" className="btn-primary w-full sm:w-auto">
                   Donate
                 </Link>
-                <Link to="/volunteer" className="btn-ghost">
+                <Link to="/volunteer" className="btn-ghost w-full sm:w-auto">
                   Volunteer
                 </Link>
               </div>

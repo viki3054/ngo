@@ -44,7 +44,7 @@ export function TestimonialCarousel() {
 
   return (
     <div className="card overflow-hidden">
-      <div className="flex items-center justify-between border-b bg-bg/40 px-6 py-4">
+      <div className="flex items-center justify-between border-b bg-bg/40 px-5 py-4 sm:px-6">
         <div className="flex items-center gap-2 font-extrabold">
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-primary/15 text-primary">
             <Quote className="h-4 w-4" />
@@ -67,7 +67,7 @@ export function TestimonialCarousel() {
         </div>
       </div>
 
-      <div className="px-6 py-7">
+      <div className="px-5 py-5 sm:px-6 sm:py-7">
         <AnimatePresence mode="wait">
           <motion.div
             key={index}

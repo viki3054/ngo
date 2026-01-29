@@ -29,7 +29,7 @@ function Stat({ label, value, suffix }: { label: string; value: number; suffix?:
   const formatted = useTransform(rounded, (latest) => latest.toLocaleString('en-IN'))
 
   return (
-    <div ref={ref} className="rounded-2xl border bg-bg/35 p-5">
+    <div ref={ref} className="rounded-2xl border bg-bg/35 p-4 sm:p-5">
       <div className="text-xs font-semibold text-fg/60">{label}</div>
       <div className="mt-2 flex items-baseline gap-1">
         <motion.div className="text-3xl font-black tracking-tight">{formatted}</motion.div>

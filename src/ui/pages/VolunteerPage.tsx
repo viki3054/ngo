@@ -4,8 +4,8 @@ import { Reveal } from '../components/Reveal'
 export function VolunteerPage() {
   return (
     <PageShell>
-      <div className="space-y-10">
-        <section className="card p-8">
+      <div className="space-y-8 sm:space-y-10">
+        <section className="card p-5 sm:p-8">
           <Reveal>
             <h1 className="text-3xl font-black tracking-tight">Volunteer with us</h1>
           </Reveal>
@@ -18,7 +18,7 @@ export function VolunteerPage() {
         </section>
 
         <section className="grid gap-6 lg:grid-cols-2">
-          <div className="card p-6">
+          <div className="card p-5 sm:p-6">
             <div className="text-lg font-extrabold">How it works</div>
             <ol className="mt-4 space-y-3 text-sm text-fg/75">
               <li>1) Share your interests and availability.</li>
@@ -27,7 +27,7 @@ export function VolunteerPage() {
             </ol>
           </div>
 
-          <form className="card space-y-4 p-6">
+          <form className="card space-y-4 p-5 sm:p-6">
             <div className="text-lg font-extrabold">Volunteer form</div>
             <div className="grid gap-3 sm:grid-cols-2">
               <label className="space-y-1 text-sm">

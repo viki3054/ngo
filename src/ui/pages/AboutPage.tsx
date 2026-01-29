@@ -4,8 +4,8 @@ import { Reveal } from '../components/Reveal'
 export function AboutPage() {
   return (
     <PageShell>
-      <div className="space-y-10">
-        <section className="card p-8">
+      <div className="space-y-8 sm:space-y-10">
+        <section className="card p-5 sm:p-8">
           <Reveal>
             <h1 className="text-3xl font-black tracking-tight">About Patsantha</h1>
           </Reveal>
@@ -42,7 +42,7 @@ export function AboutPage() {
           ))}
         </section>
 
-        <section className="card p-8">
+        <section className="card p-5 sm:p-8">
           <Reveal>
             <h2 className="text-2xl font-black tracking-tight">How we work</h2>
           </Reveal>

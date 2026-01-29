@@ -5,8 +5,8 @@ import { Reveal } from '../components/Reveal'
 export function DonatePage() {
   return (
     <PageShell>
-      <div className="space-y-10">
-        <section className="card p-8">
+      <div className="space-y-8 sm:space-y-10">
+        <section className="card p-5 sm:p-8">
           <Reveal>
             <h1 className="text-3xl font-black tracking-tight">Donate</h1>
           </Reveal>
@@ -19,19 +19,19 @@ export function DonatePage() {
         </section>
 
         <section className="grid gap-6 lg:grid-cols-2">
-          <div className="card p-6">
+          <div className="card p-5 sm:p-6">
             <div className="flex items-center gap-2 text-lg font-extrabold">
               <QrCode className="h-5 w-5 text-primary" /> UPI (recommended)
             </div>
             <div className="mt-3 text-sm text-fg/70">
               UPI ID: <span className="font-semibold">patsantha@upi</span>
             </div>
-            <div className="mt-4 rounded-2xl border bg-bg/40 p-6 text-sm text-fg/70">
+            <div className="mt-4 rounded-2xl border bg-bg/40 p-5 sm:p-6 text-sm text-fg/70">
               Add QR image here (optional). For now this is a placeholder.
             </div>
           </div>
 
-          <div className="card p-6">
+          <div className="card p-5 sm:p-6">
             <div className="flex items-center gap-2 text-lg font-extrabold">
               <ShieldCheck className="h-5 w-5 text-primary" /> Bank transfer
             </div>

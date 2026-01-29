@@ -31,7 +31,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b bg-bg/70 backdrop-blur">
-      <div className="container-pad flex h-16 items-center justify-between">
+      <div className="container-pad flex h-14 items-center justify-between sm:h-16">
         <Link to="/" className="flex items-center gap-2 font-extrabold tracking-tight">
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-primary text-primaryFg shadow-soft">
             <HeartHandshake className="h-5 w-5" />

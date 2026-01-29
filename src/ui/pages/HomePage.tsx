@@ -12,7 +12,7 @@ export function HomePage() {
 
   return (
     <PageShell>
-      <section className="grid items-center gap-10 lg:grid-cols-2">
+      <section className="grid items-center gap-8 sm:gap-10 lg:grid-cols-2">
         <div className="space-y-6">
           <Reveal>
             <div className="inline-flex items-center gap-2 rounded-full border bg-card/60 px-4 py-2 text-xs font-semibold text-fg/80">
@@ -45,7 +45,7 @@ export function HomePage() {
           </Reveal>
         </div>
 
-        <div className="card relative overflow-hidden p-6">
+        <div className="card relative overflow-hidden p-5 sm:p-6">
           <div className="absolute inset-0 bg-[linear-gradient(110deg,hsl(var(--primary)/0.20),transparent_35%,hsl(var(--ring)/0.16))]" />
           <motion.div
             aria-hidden
@@ -112,7 +112,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="mt-14">
+      <section className="mt-12 sm:mt-14">
         <Reveal>
           <div className="mb-4 text-sm font-extrabold text-fg/80">Impact at a glance</div>
         </Reveal>
@@ -121,7 +121,7 @@ export function HomePage() {
         </Reveal>
       </section>
 
-      <section className="mt-12 grid gap-6 lg:grid-cols-2">
+      <section className="mt-10 grid gap-6 sm:mt-12 lg:grid-cols-2">
         <Reveal>
           <TestimonialCarousel />
         </Reveal>

@@ -5,7 +5,7 @@ import { ScrollToTop } from './components/ScrollToTop'
 
 export function Layout() {
   return (
-    <div className="min-h-dvh">
+    <div className="min-h-dvh overflow-x-clip">
       <ScrollToTop />
       <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
         <div className="absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_center,hsl(var(--primary)/0.28),transparent_60%)] blur-2xl" />
@@ -14,7 +14,7 @@ export function Layout() {
       </div>
 
       <Navbar />
-      <main className="container-pad py-10">
+      <main className="container-pad py-6 sm:py-10">
         <Outlet />
       </main>
       <Footer />
